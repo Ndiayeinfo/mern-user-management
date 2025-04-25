@@ -22,5 +22,13 @@ services:
     depends_on:
       - mongo
 
+  frontend:
+    build: ./frontend
+    container_name: frontend_client
+    ports:
+      - '3000:80'  # nginx écoute sur le port 80, on expose sur 3000
+    depends_on:
+      - backend
+
 volumes:
   mongo-data:
