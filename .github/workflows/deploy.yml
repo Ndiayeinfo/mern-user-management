@@ -22,7 +22,7 @@ jobs:
 
       - name: SSH & deploy
         run: |
-          ssh -i ~/.ssh/id_ed25519 youssoundiaye_yn_yn@<34.60.116.64> '
+          ssh -i ~/.ssh/id_ed25519 youssoundiaye_yn_yn@<34.60.116.64 '
             cd ~/mern-user-management &&
             git pull origin main &&
             docker-compose down &&
