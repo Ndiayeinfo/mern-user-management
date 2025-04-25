@@ -24,7 +24,8 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 youssoundiaye_yn_yn@34.60.116.64 '
             cd ~/mern-user-management &&
-            git pull --rebase=false origin main &&
+            git fetch origin main &&
+            git reset --hard origin/main &&
             docker-compose down &&
             docker-compose up --build -d
           '
