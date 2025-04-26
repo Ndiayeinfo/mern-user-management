@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const authRoutes = require('./routes/auth');
 
 // ⚡ Remarque : SANS /api ici car Nginx fait la réécriture
-app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 // Route de test
 app.get('/', (req, res) => {
