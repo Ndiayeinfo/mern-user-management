@@ -12,13 +12,13 @@ services:
   backend_server:
     build: ./backend
     container_name: backend_server
-    expose:
-      - "5000"
-    depends_on:
-      - mongo_db
     environment:
       - MONGO_URI=mongodb://mongo_db:27017/mern-user-management
-      - JWT_SECRET=your_secret_key_here
+      - JWT_SECRET=your_jwt_secret_key
+    depends_on:
+      - mongo_db
+    expose:
+      - "5000"
     restart: always
 
   frontend:
