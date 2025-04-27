@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const authRoutes = require('./routes/auth');
 
 // ⚡ ATTENTION : utiliser /auth (PAS /api/auth)
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 // Test route
 app.get('/', (req, res) => {
